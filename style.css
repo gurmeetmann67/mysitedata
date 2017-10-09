@@ -2,6 +2,10 @@
 	margin:0;
 	padding:0;
 }
+embed.hidden {
+    position: absolute;
+    left: -10000px;
+}
 a{
 	text-decoration:none;
 	outline:none;
