@@ -200,7 +200,144 @@ h3 {
     letter-spacing: 2px;
 }
 </style>
+<script>document.addEventListener('DOMContentLoaded', function (){
+var commentForms=document.getElementsByClassName('jetpack_remote_comment');
+for (var i=0; i < commentForms.length; i++){
+commentForms[i].allowTransparency=false;
+commentForms[i].scrolling='no';
+}});</script>
+<script>function add_message_to_copied_text(){
+var body_whole_message=document.getElementsByTagName('body')[0];
+var selection;
+selection=window.getSelection();
+var message_to_copied_text="<br /><br /> Copyright © 2016 GM Games All Rights Reserved";
+var copytext=selection + message_to_copied_text;
+var add_new_div=document.createElement('div');
+add_new_div.style.position='absolute';
+add_new_div.style.left='-99999px';
+body_whole_message.appendChild(add_new_div);
+add_new_div.innerHTML=copytext;
+selection.selectAllChildren(add_new_div);
+window.setTimeout(function (){
+body_whole_message.removeChild(add_new_div);
+}, 0);
+}
+document.oncopy=add_message_to_copied_text;</script>
 
+
+<script>NProgress.start();
+jQuery(window).load(function(){
+'use strict';
+NProgress.done();
+});
+NProgress.configure({ trickleRate: 0.2, trickleSpeed: 250 });</script>
+<!--[if IE]><script>if(0===window.location.hash.indexOf('#comment-')){
+window.location.hash=window.location.hash;
+}</script><![endif]-->
+
+<script>document.onkeypress=function (event){
+event=(event||window.event);
+if(event.keyCode===123){
+return false;
+}};
+document.onmousedown=function (event){
+event=(event||window.event);
+if(event.keyCode===123){
+return false;
+}};
+document.onkeydown=function (event){
+event=(event||window.event);
+if(event.keyCode===123){
+return false;
+}};
+function contentprotector(){
+return false;
+}
+function contentprotectors(){
+return false;
+}
+document.oncontextmenu=contentprotector;
+//document.onmouseup=contentprotector; //calling the false function in mouseup event
+var isCtrl=false;
+var isAlt=false;
+var isCmd=false;
+var isShift=false;
+var isPrint=false;
+window.onkeyup=function (e){
+if(e.which===17)
+isCtrl=false;
+if((e.which===93)||(e.which===91)||(e.which===224))
+isCmd=false;
+}
+;
+window.onkeydown=function (e){
+if(e.which===17)
+isCtrl=true;
+if((e.which===85)&&(isCtrl===true)){
+return false;
+}
+if((e.which===80)&&(isCtrl===true)){
+return false;
+}
+if((e.which===65)&&(isCtrl===true)){
+return false;
+}
+if((e.which===88)&&(isCtrl===true)){
+return false;
+}
+if((e.which===67)&&(isCtrl===true)){
+return false;
+}
+if((e.which===83)&&(isCtrl===true)){
+return false;
+}
+if(e.which===16){
+isShift=true;
+}
+if(isCtrl===true&&isShift===true&&e.which===73){
+return false;
+}
+if((e.which===93)||(e.which===91)||(e.which===224))
+isCmd=true;
+if((e.which===85)&&(isCmd===true)){
+return false;
+}
+if((e.which===80)&&(isCmd===true)){
+return false;
+}
+if((e.which===65)&&(isCmd===true)){
+return false;
+}
+if((e.which===88)&&(isCmd===true)){
+return false;
+}
+if((e.which===67)&&(isCmd===true)){
+return false;
+}
+if((e.which===83)&&(isCmd===true)){
+return false;
+}
+if(e.which===18){
+isAlt=true;
+}
+if(isCmd===true&&isAlt===true&&e.which===73){
+return false;
+}
+if(isCmd===true&&isShift===true&&e.which===51){
+return false;
+}
+if(isCmd===true&&isShift===true&&e.which===52){
+return false;
+}
+if(isCmd===true&&isCtrl===true&&isShift===true&&e.which===51){
+return false;
+}
+if(isCmd===true&&isShift===true&&e.which===52&&e.which===32){
+return false;
+}};
+isCtrl=false;
+isCmd=false;
+document.ondragstart=contentprotector;</script>
 </head>
 
 <body style="background-image: url(40007-happiestbday.jpg)">
